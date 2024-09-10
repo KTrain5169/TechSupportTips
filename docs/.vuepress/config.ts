@@ -1,14 +1,14 @@
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 import { viteBundler } from '@vuepress/bundler-vite'
-import { path } from '@vuepress/utils'
+import { fileURLToPath, URL } from 'url'
 
 export default defineUserConfig({
   bundler: viteBundler({
     viteOptions: {
       resolve: {
         alias: {
-          vue: 'vue/dist/vue.esm-bundler.js'
+          '@': fileURLToPath(new URL('./', import.meta.url))
         }
       }
     }
@@ -28,5 +28,4 @@ export default defineUserConfig({
   head: [
     ['link', { rel: 'stylesheet', href: '/styles/index.css' }]
   ],
-  clientConfigFile: path.resolve(__dirname, './client.ts'),
 })
