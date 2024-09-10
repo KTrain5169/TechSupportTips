@@ -1,0 +1,10 @@
+# node.js modules
+node_modules/
+
+# vuepress build
+docs/.vuepress/dist/
+
+# temporary files
+.temp/
+.cache/
+config.ts.*.mjs
