@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default'
 import { viteBundler } from '@vuepress/bundler-vite'
+import { path } from '@vuepress/utils'
 
 export default defineUserConfig({
   bundler: viteBundler({
@@ -24,4 +25,8 @@ export default defineUserConfig({
     ],
     sidebar: 'auto',
   }),
+  head: [
+    ['link', { rel: 'stylesheet', href: '/styles/index.css' }]
+  ],
+  clientConfigFile: path.resolve(__dirname, './client.ts'),
 })
