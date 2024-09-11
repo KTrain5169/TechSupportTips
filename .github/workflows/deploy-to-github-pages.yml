@@ -9,6 +9,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pages: write
       id-token: write
     environment:
@@ -35,6 +36,9 @@ jobs:
 
       - name: Build VuePress site
         run: pnpm build
+
+      - name: List build output # Debugging
+        run: ls -R docs/.vuepress/dist
 
       - name: Upload build artifact for Pages
         uses: actions/upload-pages-artifact@v3
