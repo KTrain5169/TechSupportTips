@@ -8,10 +8,10 @@ export default defineUserConfig({
     viteOptions: {
       resolve: {
         alias: {
-          '@': fileURLToPath(new URL('./', import.meta.url))
-        }
-      }
-    }
+          '@': fileURLToPath(new URL('./', import.meta.url)),
+        },
+      },
+    },
   }),
   lang: 'en-US',
   title: 'Your Site Title',
@@ -25,7 +25,5 @@ export default defineUserConfig({
     ],
     sidebar: 'auto',
   }),
-  head: [
-    ['link', { rel: 'stylesheet', href: '/styles/index.css' }]
-  ],
+  head: [['link', { rel: 'stylesheet', href: '/styles/index.css' }]],
 })

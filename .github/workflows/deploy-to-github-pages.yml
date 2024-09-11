@@ -16,32 +16,32 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-    
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v4
-      with:
-        version: 9
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.15.0'
-        cache: 'pnpm'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
-    - name: Install dependencies
-      run: pnpm install
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.15.0'
+          cache: 'pnpm'
 
-    - name: Build VuePress site
-      run: pnpm build
+      - name: Install dependencies
+        run: pnpm install
 
-    - name: Upload build artifact for Pages
-      uses: actions/upload-pages-artifact@v3
-      with:
-        name: github-pages
-        path: docs/.vuepress/dist
-    
-    - name: Deploy to Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+      - name: Build VuePress site
+        run: pnpm build
+
+      - name: Upload build artifact for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          name: github-pages
+          path: docs/.vuepress/dist
+
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

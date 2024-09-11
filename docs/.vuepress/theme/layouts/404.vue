@@ -1,15 +1,15 @@
 <template>
-    <div class="not-found">
-      <h1>404: Page Not Found</h1>
-      <div class="glitch" data-text="ERROR">ERROR</div>
-      <p>Oops! Looks like you've ventured into uncharted digital territory.</p>
-      <router-link to="/" class="button">Return to Home Base</router-link>
-    </div>
+  <div class="not-found">
+    <h1>404: Page Not Found</h1>
+    <div class="glitch" data-text="ERROR">ERROR</div>
+    <p>Oops! Looks like you've ventured into uncharted digital territory.</p>
+    <router-link to="/" class="button">Return to Home Base</router-link>
+  </div>
 </template>
 
 <script>
 export default {
-  name: '404'
+  name: '404',
 }
 </script>
 
@@ -45,10 +45,12 @@ h1 {
 }
 
 @keyframes glitch {
-  2%, 64% {
+  2%,
+  64% {
     transform: translate(2px, 0) skew(0deg);
   }
-  4%, 60% {
+  4%,
+  60% {
     transform: translate(-2px, 0) skew(0deg);
   }
   62% {
