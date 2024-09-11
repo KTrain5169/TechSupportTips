@@ -35,9 +35,3 @@ jobs:
 
     - name: Run Prettier
       run: pnpm exec prettier --check .
-
-    - name: Commit changes
-      run: |
-        git add .
-        git commit -m "chore(prettier): run prettier"
-        git push
