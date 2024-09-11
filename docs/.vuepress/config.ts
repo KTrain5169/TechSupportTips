@@ -26,5 +26,9 @@ export default defineUserConfig({
     ],
     sidebar: 'auto',
   }),
-  head: [['link', { rel: 'stylesheet', href: '/styles/index.css' }]],
+  // Remove any custom head links for CSS, as the default theme CSS 
+  // should be automatically included
+  // head: [
+  //   ['link', { rel: 'stylesheet', href: '/styles/index.css' }]
+  // ],
 })
