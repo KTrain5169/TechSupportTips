@@ -4,6 +4,7 @@ import { viteBundler } from '@vuepress/bundler-vite'
 import { fileURLToPath, URL } from 'url'
 
 export default defineUserConfig({
+  base: '/TechSupportTips/', 
   bundler: viteBundler({
     viteOptions: {
       resolve: {
