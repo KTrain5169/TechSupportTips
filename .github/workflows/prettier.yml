@@ -2,9 +2,7 @@ name: Prettier Formatting
 
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
   workflow_dispatch:
 
 permissions:
@@ -36,11 +34,10 @@ jobs:
       run: pnpm install
 
     - name: Run Prettier
-      run: pnpm run format
+      run: pnpm exec prettier --check .
 
     - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: "CI changes: Format with Prettier"
-        branch: ${{ github.head_ref }}
-
+      run: |
+        git add .
+        git commit -m "chore(prettier): run prettier"
+        git push
