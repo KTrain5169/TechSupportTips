@@ -39,7 +39,7 @@ jobs:
     - name: Upload build artifact for Pages
       uses: actions/upload-pages-artifact@v3
       with:
-        name: "VuePress build"
+        name: github-pages
         path: docs/.vuepress/dist
     
     - name: Deploy to Pages
