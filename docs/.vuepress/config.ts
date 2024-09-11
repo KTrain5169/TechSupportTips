@@ -22,13 +22,18 @@ export default defineUserConfig({
     logo: 'https://vuejs.org/images/logo.png',
     navbar: [
       { text: 'Home', link: '/' },
-      { text: 'Guide', link: '/guide/' },
+      { text: 'About', link: '/about' },
     ],
-    sidebar: 'auto',
+    sidebar: {
+      '/': [
+        {
+          text: 'Basics',
+          collapsible: true,
+          children: [
+            '/basics/how-ask-question',
+          ],
+        },
+      ],
+    },
   }),
-  // Remove any custom head links for CSS, as the default theme CSS 
-  // should be automatically included
-  // head: [
-  //   ['link', { rel: 'stylesheet', href: '/styles/index.css' }]
-  // ],
 })
