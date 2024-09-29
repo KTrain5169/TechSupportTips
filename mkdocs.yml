@@ -3,5 +3,15 @@ theme:
 nav:
     - Home: index.md
     - About:
-        - About us: about.md
-        - License: license.md
+        - About us: about/about_us.md
+        - Attributions: about/thanks.md
+        - License: about/license.md
+        - Contributing: about/contributing.md
+    - Other languages:
+        - List of all other languages: lang/i18n.md
+        - Vietnamese: lang/vn.md
+    - Before asking: before_asking.md
+    - When asking: when_asking.md
+    - Help us help you: help_us_help_you.md
+    - Understanding common terms: common_terms.md
+    - Common problems: common_problems.md
